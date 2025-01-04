@@ -1,3 +1,15 @@
+## Default Permission
+
+Default permissions for the plugin
+
+- `allow-get-password`
+- `allow-set-password`
+- `allow-delete-password`
+- `allow-get-secret`
+- `allow-set-secret`
+- `allow-delete-secret`
+- `allow-get-or-set-password`
+- `allow-get-or-set-secret`
 
 ## Permission Table
 

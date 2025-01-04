@@ -295,6 +295,11 @@
       "type": "string",
       "oneOf": [
         {
+          "description": "Default permissions for the plugin",
+          "type": "string",
+          "const": "default"
+        },
+        {
           "description": "Enables the delete_password command without any pre-configured scope.",
           "type": "string",
           "const": "allow-delete-password"
