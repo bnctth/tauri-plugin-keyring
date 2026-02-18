@@ -9,8 +9,13 @@ pub fn init<R: Runtime, C: DeserializeOwned>(
 }
 
 /// Access to the keyring APIs.
-#[derive(Clone)]
 pub struct Keyring<R: Runtime>(AppHandle<R>);
+
+impl<R: Runtime> Clone for Keyring<R> {
+    fn clone(&self) -> Self {
+        Keyring(self.0.clone())
+    }
+}
 
 impl<R: Runtime> Keyring<R> {
     pub fn get_password(&self, service: &str, user: &str) -> keyring::Result<Option<String>> {

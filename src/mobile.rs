@@ -25,6 +25,11 @@ pub fn init<R: Runtime, C: DeserializeOwned>(
 #[derive(Clone)]
 pub struct Keyring<R: Runtime>(PluginHandle<R>);
 
+impl<R: Runtime> Clone for crate::Keyring<R> {
+  fn clone(&self) -> Self {
+    crate::Keyring(self.0.clone())
+  }
+}
 impl<R: Runtime> Keyring<R> {
   pub fn ping(&self, payload: PingRequest) -> crate::Result<PingResponse> {
     self
