@@ -17,9 +17,9 @@ mod models;
 pub use error::{Error, Result};
 
 #[cfg(desktop)]
-use desktop::Keyring;
+pub use desktop::Keyring;
 #[cfg(mobile)]
-use mobile::Keyring;
+pub use mobile::Keyring;
 
 /// Extensions to [`tauri::App`], [`tauri::AppHandle`] and [`tauri::Window`] to access the keyring APIs.
 pub trait KeyringExt<R: Runtime> {
