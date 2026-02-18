@@ -22,6 +22,7 @@ pub fn init<R: Runtime, C: DeserializeOwned>(
 }
 
 /// Access to the keyring APIs.
+#[derive(Clone)]
 pub struct Keyring<R: Runtime>(PluginHandle<R>);
 
 impl<R: Runtime> Keyring<R> {
